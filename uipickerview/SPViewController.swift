@@ -10,21 +10,25 @@ import UIKit
 
 class SPViewController: UIViewController {
 
+
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    var ast = "星座"
+    var bld = " 血型"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
 
-    /*
-    // MARK: - Navigation
+        super.viewDidAppear(animated)
+        label1.text = ast
+        label2.text = bld
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

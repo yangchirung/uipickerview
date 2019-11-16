@@ -79,6 +79,13 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
         
        }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let nextVC = segue.destination as! SPViewController
+        nextVC.ast = selectedAst ?? ""
+        nextVC.bld = selectedBlood ?? ""
+    }
+    
 
 }
 
