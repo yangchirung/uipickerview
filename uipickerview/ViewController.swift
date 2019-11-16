@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
-    
+    //Mark PickerView count of each column
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch component {
         case 0:
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
             return 0
         }
     }
-    
+    //Mark PickerView show value
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
@@ -49,6 +49,16 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
         }
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+           switch component {
+           case 0:
+               print( astrological[row])
+           case 1:
+               print( bloudType[row])
+           default:
+               break
+           }
+       }
     
 
 }
