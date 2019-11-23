@@ -79,6 +79,17 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
         
        }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        print("will appear")
+        pickerView.selectRow(0, inComponent: 0, animated:true)
+        pickerView.selectRow(0, inComponent: 1, animated:true)
+        selectedAst = nil
+        selectedBlood = nil
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let nextVC = segue.destination as! SPViewController
